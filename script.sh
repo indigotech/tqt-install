@@ -18,7 +18,7 @@ echo "\033[0;32mInstall gem...\033[0m"
 cd $TQT_CLONE;
 
 gem build -V tqt.gemspec;
-gem install `ls *.gem` --local --no-ri --no-rdoc;
+gem install `ls *.gem` --no-ri --no-rdoc;
 
 rm -rf $TQT_CLONE;
 
