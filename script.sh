@@ -14,7 +14,7 @@ hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/indigotec
 }
 
 echo ""
-echo "\033[0;32mInstall gem...\033[0m"
+echo "\033[0;32mInstalling gem...\033[0m"
 cd $TQT_CLONE;
 
 gem build -V tqt.gemspec;
