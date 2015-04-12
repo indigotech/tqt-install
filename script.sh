@@ -8,7 +8,7 @@ fi
 rm -rf $TQT_CLONE;
 
 echo "\033[0;32mCloning tqt...\033[0m"
-hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/indigotech/tqt.git $TQT_CLONE -b master || {
+hash git >/dev/null 2>&1 && env git clone --depth=1 git@github.com:indigotech/tqt.git $TQT_CLONE -b master || {
   echo "git not installed"
   exit
 }
