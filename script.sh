@@ -21,11 +21,17 @@ hash git >/dev/null 2>&1 && env git clone --depth=1 $GIT_URL $TQT_CLONE -b $GIT_
   exit
 }
 
-echo ""
+echo
 echo "\033[0;32mInstalling gem...\033[0m"
 cd $TQT_CLONE;
 
+# Remove previous versions
+gem uninstall tqt -ax
+
+# Build the gem
 gem build -V tqt.gemspec;
+
+# Install the gem
 gem install `ls *.gem` --no-ri --no-rdoc;
 
 rm -rf $TQT_CLONE;
